@@ -4,4 +4,4 @@
 
 ## Project Contents:
 ### gs1: Serialization and Serializer Class
-### gs2: De-serialization and Insert Data
+### gs2: De-serialization and Create/Insert Data
