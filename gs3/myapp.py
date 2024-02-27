@@ -14,16 +14,3 @@ def get_data(id = None):
 
 get_data(1)
     
-
-# def get_data(id=None):
-#     url = URL
-#     if id is not None:
-#         url += f"?id={id}"
-#     r = requests.get(url)
-#     if r.status_code == 200:
-#         data = r.json()
-#         print(data)
-#     else:
-#         print(f"Failed to fetch data. Status code: {r.status_code}")
-
-# get_data(1)
