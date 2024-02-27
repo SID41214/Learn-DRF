@@ -10,7 +10,7 @@ from .serializers import StudentSerializer
 def student_api(request):
     if request.method == 'GET':
         json_data = request.body
-        stream =io.ByteIO(json_data)
+        stream =io.BytesIO(json_data)
         python_data = JSONParser().parse(stream)
         id = python_data.get('id',None)
         if id is not None:
