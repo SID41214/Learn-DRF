@@ -18,10 +18,18 @@ class StudentSerializer(serializers.Serializer):
         return instance
     
     #Feild level validation
-    def validate_roll(self,value):   #for validation of roll feild of student serializer // for feild validation
+    def validate_roll(self,value):   #for validation of roll feild of student serializer 
         if value >= 200:
             raise serializers.ValidationError(" Seat Full")
         return value
       
+    
+    # Object level validation
+    def validate(self,data):
+        nm =data.get('name')
+        ct =data.get('city')
+        if nm.lower() == 'rohit' and ct.lower() != 'ranchi':
+            raise serializers.ValidationError("City must to be rachi")
+        return data
       
 
