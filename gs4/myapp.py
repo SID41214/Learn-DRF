@@ -18,16 +18,16 @@ def get_data(id = None):
 
 def post_data():
     data={
-        'name':'New Ravi',
-        'roll':'104',
-        'city':'Dhanbad'
+        'name':'Validated Ravi',
+        'roll':'11',
+        'city':'VA Dhanbad'
         }
     json_data=json.dumps(data)
     r=requests.post(url=URL,data=json_data)
     data=r.json()
     print(data)
 
-#post_data()  
+# post_data()  
        
 
 
