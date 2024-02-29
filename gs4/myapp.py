@@ -18,9 +18,9 @@ def get_data(id = None):
 
 def post_data():
     data={
-        'name':'Rohit',
-        'roll':'120',
-        'city':'Ranchi'
+        'name':'kohan',
+        'roll':'20',
+        'city':'dunki'
         }
     json_data=json.dumps(data)
     r=requests.post(url=URL,data=json_data)
