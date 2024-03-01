@@ -7,4 +7,5 @@
 ### gs2: De-serialization and Create/Insert Data
 ### gs3: CRUD API using FBV and CBV (function  & class based View implementation)
 ### gs4: Validation (Feild level,object level ,validators)
+### gs5: Model Serializer
                                     
