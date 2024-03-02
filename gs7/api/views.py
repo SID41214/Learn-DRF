@@ -25,6 +25,21 @@ def student_api(request):
             serializer.save()
             return Response({'msg':'Data created'})
         return Response(serializer.errors)
+    
+    if request.method == 'PUT':
+        id = request.data.get('id')
+        stu = Student.objects.get(pk=id)    # pylint: disable=no-member
+        serializer = StudentSerializer(stu,data=request.data,partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'msg':'Data updated'})
+        return Response(serializer.errors)
+    
+    if request.method == 'DELETE':
+        id = request.data.get('id')
+        stu = Student.objects.get(pk=id)     # pylint: disable=no-member
+        stu.delete()
+        return Response({'msg':'Data deleted'})
 
 
 

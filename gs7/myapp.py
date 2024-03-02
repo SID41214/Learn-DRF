@@ -16,7 +16,7 @@ def get_data(id = None):
 
 
 
-get_data(1)
+# get_data(1)
  
 
 
@@ -44,7 +44,8 @@ def update_data():
         'city':' updated Dhanbad'
         }
     json_data=json.dumps(data)
-    r=requests.put(url=URL,data=json_data)
+    headers = {'Content-Type':'application/json'}
+    r=requests.put(url=URL,headers=headers,data=json_data)
     data=r.json()
     print(data)
     
@@ -55,8 +56,9 @@ def update_data():
 def delete_data():
     data={ 'id':3 }
     json_data=json.dumps(data)
-    r=requests.delete(url=URL,data=json_data)
+    headers = {'Content-Type':'application/json'}
+    r=requests.delete(url=URL,headers=headers,data=json_data)
     data=r.json()
     print(data)
 
-#delete_data()
+# delete_data()
