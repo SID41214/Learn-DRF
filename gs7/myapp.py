@@ -13,19 +13,23 @@ def get_data(id = None):
     data =r.json()
     print(data)
 
-# get_data(2)
+
+
+
+get_data(1)
  
 
 
 def post_data():
     data={
-        'name':'First',
-        'roll':'1',
-        'city':'one'
+        'name':'chikki',
+        'roll':'100',
+        'city':'newc'
         }
     headers = {'Content-Type':'application/json'}
     json_data=json.dumps(data)
     r=requests.post(url=URL,headers=headers,data=json_data)
+  
     data=r.json()
     print(data)
 

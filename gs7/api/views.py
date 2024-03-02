@@ -9,13 +9,22 @@ from .serializers import StudentSerializer
 def student_api(request):
     if request.method =='GET':
         id = request.data.get('id')
+        # id = request.query_params.get('id')
         if id is not None:
             stu =Student.objects.get(id=id)   # pylint: disable=no-member
             serializer = StudentSerializer(stu)
             return Response(serializer.data)
+            
         stu = Student.objects.all()     # pylint: disable=no-member
         serializer = StudentSerializer(stu,many=True)
         return Response(serializer.data)
+    
+    if request.method == 'POST':
+        serializer =StudentSerializer(data=request.data) 
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'msg':'Data created'})
+        return Response(serializer.errors)
 
 
 
