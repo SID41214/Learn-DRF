@@ -10,4 +10,6 @@
 ### gs5: Model Serializer  
 ### gs6: api_view, Response(), Browsable api
 ### gs7: CRUD using function based API view (api_view)
+### gs8: CRUD in Browsable api ,status 
+### gs9: Class based APIView 
                                     
