@@ -12,5 +12,6 @@
 ### gs7: CRUD using function based API view (api_view)
 ### gs8: CRUD in Browsable api ,status 
 ### gs9: Class based APIView 
-### gs10:
+### gs10: Generic APIView and Mixins
+
                                     
