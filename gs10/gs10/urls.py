@@ -4,7 +4,9 @@ from django.urls import path
 from api import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('studentapi/',views.StudentList.as_view()),
+    path('studentapi/',views.LCStudentAPI.as_view()),
+    path('studentapi/<int:pk>',views.RUDStudentAPI.as_view()),
+    
     
     # path('studentapi/',views.StudentCreate.as_view()),
     # path('studentapi/<int:pk>',views.StudentAPI.as_view()),

@@ -13,5 +13,8 @@
 ### gs8: CRUD in Browsable api ,status 
 ### gs9: Class based APIView 
 ### gs10: Generic APIView and Mixins
+### gs11: Concrete View Class -ListAPIView,CreateAPIView,RetrieveAPIView,UpdateAPIView,DestroyAPIView,ListCreateAPIView,RetrieveUpdateAPIView,RetrieveDestroyAPIView,RetriveUpdateDestroyAPIView
+### gs12: 
+
 
                                     

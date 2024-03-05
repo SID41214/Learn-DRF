@@ -5,44 +5,33 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.mixins import ListModelMixin, CreateModelMixin,RetrieveModelMixin,UpdateModelMixin,DestroyModelMixin
 
 
-class StudentList(GenericAPIView,ListModelMixin):
-    queryset = Student.objects.all()
+
+# List And Create - pk not required
+class LCStudentAPI(GenericAPIView,ListModelMixin,CreateModelMixin):
+    queryset = Student.objects.all()         # pylint: disable=no-member
     serializer_class = StudentSerializer
     
-    def get(self,request,*args,**kwargs):
-        return self.list(request,*args,**kwargs)
-
-
-class StudentCreate(GenericAPIView,CreateModelMixin):
-    queryset = Student.objects.all()
-    serializer_class = StudentSerializer
-    
-    def post(self,request,*args,**kwargs):
+    def get(self, request, *args, **kwargs):
+        return self.list(request, *args,**kwargs)
+    def post(self, request, *args, **kwargs):
         return self.create(request,*args,**kwargs)
+    
 
+# Retrieve update and Destroy - pk Required
 
-class StudentRetrive(GenericAPIView,RetrieveModelMixin):
-    queryset = Student.objects.all()
+class RUDStudentAPI(GenericAPIView,UpdateModelMixin,RetrieveModelMixin,DestroyModelMixin):
+    queryset = Student.objects.all()         # pylint: disable=no-member
     serializer_class = StudentSerializer
     
-    def get(self,request,*args,**kwargs):
-        return self.retrieve(request,*args,**kwargs)
-
-
-class StudentUpdate(GenericAPIView,UpdateModelMixin):
-    queryset = Student.objects.all()
-    serializer_class = StudentSerializer
+    def get(self,request,*args, **kwargs):
+        return self.retrieve(request,*args, **kwargs)
+    def put(self,request,*args, **kwargs):
+        return self.update(request,*args, **kwargs)
+    def delete(self,request,*args, **kwargs):
+        return self.destroy(request,*args, **kwargs)
     
-    def put(self,request,*args,**kwargs):
-        return self.update(request,*args,**kwargs)
-
-
-class StudentDestroy(GenericAPIView,DestroyModelMixin):
-    queryset = Student.objects.all()
-    serializer_class = StudentSerializer
     
-    def delete(self,request,*args,**kwargs):
-        return self.destroy(request,*args,**kwargs)
+     
 
 
 
@@ -51,55 +40,54 @@ class StudentDestroy(GenericAPIView,DestroyModelMixin):
 
 
 
+#-----------------------------------------------------------------------------------------------------------------------------
+#------------------BY GenericAPIView and ModelMixin for which of having separate url in urls.py ------------------------------
+#-----------------------------------------------------------------------------------------------------------------------------
+
+# class StudentList(GenericAPIView,ListModelMixin):
+#     queryset = Student.objects.all()
+#     serializer_class = StudentSerializer
+    
+#     def get(self,request,*args,**kwargs):
+#         return self.list(request,*args,**kwargs)
 
 
+# class StudentCreate(GenericAPIView,CreateModelMixin):
+#     queryset = Student.objects.all()
+#     serializer_class = StudentSerializer
+    
+#     def post(self,request,*args,**kwargs):
+#         return self.create(request,*args,**kwargs)
 
 
+# class StudentRetrive(GenericAPIView,RetrieveModelMixin):
+#     queryset = Student.objects.all()
+#     serializer_class = StudentSerializer
+    
+#     def get(self,request,*args,**kwargs):
+#         return self.retrieve(request,*args,**kwargs)
 
 
+# class StudentUpdate(GenericAPIView,UpdateModelMixin):
+#     queryset = Student.objects.all()
+#     serializer_class = StudentSerializer
+    
+#     def put(self,request,*args,**kwargs):
+#         return self.update(request,*args,**kwargs)
 
 
+# class StudentDestroy(GenericAPIView,DestroyModelMixin):
+#     queryset = Student.objects.all()
+#     serializer_class = StudentSerializer
+    
+#     def delete(self,request,*args,**kwargs):
+#         return self.destroy(request,*args,**kwargs)
+    
+    
+    
+#-------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# ---------------------Previous one --------------------------
 
 
 
