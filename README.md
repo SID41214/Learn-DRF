@@ -14,7 +14,9 @@
 ### gs9: Class based APIView 
 ### gs10: Generic APIView and Mixins
 ### gs11: Concrete View Class -ListAPIView,CreateAPIView,RetrieveAPIView,UpdateAPIView,DestroyAPIView,ListCreateAPIView,RetrieveUpdateAPIView,RetrieveDestroyAPIView,RetriveUpdateDestroyAPIView
-### gs12: ViewSet
+### gs12: ViewSet ,ViewSet Class
+### gs13: ModelViewSet
+
 
 
                                     
