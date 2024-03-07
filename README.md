@@ -16,7 +16,8 @@
 ### gs11: Concrete View Class -ListAPIView,CreateAPIView,RetrieveAPIView,UpdateAPIView,DestroyAPIView,ListCreateAPIView,RetrieveUpdateAPIView,RetrieveDestroyAPIView,RetriveUpdateDestroyAPIView
 ### gs12: ViewSet ,ViewSet Class
 ### gs13: ModelViewSet
-
+### gs14 :Authentication, Basic Authentication, permission classes 
+### gs15 :Authentication, Session authentication, permission classes 
 
 
                                     
