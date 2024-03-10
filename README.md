@@ -35,6 +35,6 @@
 
 ### gs16 :Custom Permission
 
-### gs17: Token Authentication, Generate Token, Ask or Create token,
+### gs17: Token Authentication, Generate Token, Ask or Create token (by admin, command line, auth.py), 
 
                                     
